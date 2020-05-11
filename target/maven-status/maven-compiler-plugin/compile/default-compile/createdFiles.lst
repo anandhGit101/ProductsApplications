@@ -1,0 +1,10 @@
+com\springboot\example\service\ApplicationsServiceImpl.class
+com\springboot\example\service\ProductsService.class
+com\springboot\example\repository\ProductsRepository.class
+com\springboot\example\service\ProductsServiceImpl.class
+com\springboot\example\domain\Products.class
+com\springboot\example\domain\Applications.class
+com\springboot\example\service\ApplicationsService.class
+com\springboot\example\ProductsApplicationsApplication.class
+com\springboot\example\repository\ApplicationsRepository.class
+com\springboot\example\controller\ProductsAndApplicationsController.class

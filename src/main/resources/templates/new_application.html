@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Create New Application</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Create New Application Details</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${application}"
+			method="post">
+
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>Application Name:</td>
+					<td><input type="text" th:field="*{applicationsName}" /></td>
+				</tr>
+				<tr>
+					<td>Application Creator:</td>
+					<td><input type="text" th:field="*{applicationsCreatedBy}" /></td>
+				</tr>
+				<tr>
+					<td>Application Description:</td>
+					<td><input type="text" th:field="*{applicationsDescription}" /></td>
+				</tr>
+				<tr>
+					<td>Application Price:</td>
+					<td><input type="text" th:field="*{applicationsPrice}" /></td>
+				</tr>								
+				<tr>
+					<td colspan="2"><button type="submit">Save</button> </td>
+				</tr>
+			</table>
+		</form>
+		
+		     <a href="${#request.contextPath}/">Back</a>
+	</div>
+</body>
+</html>

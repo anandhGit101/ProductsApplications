@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Applications Manager</title>
+</head>
+<body>
+<div align="center">
+    <h1>Applications List</h1>
+    <a href="newApp">Create New Application Entry</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Application ID</th>
+                <th>Name</th>
+                <th>Created By</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="appln : ${listApplications}">
+            	<td th:text="${appln.applicationsId}">Product ID</td>
+                <td th:text="${appln.applicationsName}">Name</td>
+                <td th:text="${appln.applicationsCreatedBy}">Creator</td>
+                <td th:text="${appln.applicationsDescription}">Made in</td>
+                <td th:text="${appln.applicationsPrice}">Price</td>
+                <td>
+                	<a th:href="@{'/editApps/' + ${appln.applicationsId}}">Edit</a>
+                	&nbsp;&nbsp;&nbsp;
+                	<a th:href="@{'/deleteApps/' + ${appln.applicationsId}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <a href="/">Back</a>
+</div>    
+</body>
+</html>
