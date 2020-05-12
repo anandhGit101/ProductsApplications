@@ -9,14 +9,14 @@
 	<div align="center">
 		<h1>Edit Applications Details</h1>
 		<br />
-		<form action="#" th:action="@{/save}" th:object="${application}"
+		<form action="#" th:action="@{/saveApp}" th:object="${application}"
 			method="post">
 
 			<table border="0" cellpadding="10">
 				<tr>				
 					<td>Application ID:</td>
 					<td>
-						<input type="text" th:field="*{applicationId}" readonly="readonly" />
+						<input type="text" th:field="*{applicationsId}" readonly="readonly" />
 					</td>
 				</tr>			
 				<tr>				
